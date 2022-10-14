@@ -32,6 +32,10 @@ const userSchema = new Schema({
         type: SchemaTypes.String,
         required: true,
     },
+    'quizzes': [{
+        type: SchemaTypes.ObjectId,
+        ref: 'quiz',
+    }],
 });
 
 const UserModel = connection.model('users', userSchema);
